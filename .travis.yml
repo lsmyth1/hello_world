@@ -8,22 +8,3 @@ compiler:
 # Build steps
 script:
   - make
-
-env:
-  global:
-   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
-   #   via the "travis encrypt" command using the project repo's public key
-   - secure: "hcPihdY8dK2pkT1OPf2u7qjvRcTe99zgcoTnYa3BDDLowP+TsDxrtkF4ljsADkVOiXwoLJlO5BZGCDsDkx+SXsSg3554bi/E27FmM0fars20sP/k6mXpQpA6OT6/YiYGT4ObRHuYZt9yyyaRoGMmnyHUuagcAWv7PtCPs2oQxXeuw6N7n+86NfJ0+Sg3Av2ooXePeeyVneodSftp6pBQeECUKpF+pFoPOnjsK4GDX43Eh8/1n6W4CK3q0gTwIuj7uy9iuA8yIbA98MDat9MN7B1xTlKrf/QiSoRmoiry1xFjCKkVN96Qx14t20NJWcLqJu0SJVZ7rqcS/QnCsAgMEHFOpOABFfFGLlA3rAXb2reZ8kI27DsK11GFLsc/dyB5JUFNVXcnKHke0Rw4eEJFVdJFntpok0W/ZVgZQZNQM3JOoJiQ/PWhiyo86YKxo9PkTAop64PJYr3jz9sEh2tIcezU4TvIzVQ704TRjpPvM3svBz05tpgTwFh5Vh/Huag48TwDm874ry+L9ib1xg2yQB3rVJJv78YAKQtxMimkHf5D5dj000sF3aELdc/DM+09AgYcynEFHFI9T0k84je+5wlo3caxp9X6ijKLrYQweDn3Kz8qh7a7qpmXxcH1twTVa3bJutActBydxa0o72R5A7cCxMgIgRkOCdAAYKanBl4="
-
-before_install:
-  - echo -n | openssl s_client -connect https://scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
-
-addons:
-  coverity_scan:
-    project:
-      name: "lsmyth1/hello_world"
-      description: "<Your project description here>"
-    notification_email: smyth.luke8@googlemail.com
-    build_command_prepend: "<Your build preprocessing command here>"
-    build_command: "<Your build command here>"
-    branch_pattern: coverity_scan
