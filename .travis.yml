@@ -8,3 +8,13 @@ compiler:
 # Build steps
 script:
   - make
+
+addons:
+  coverity_scan:
+    project:
+      name: "lsmyth1/hello_world"
+      description: "<Your project description here>"
+    notification_email: smyth.luke8@googlemail.com
+    build_command_prepend: "<Your build preprocessing command here>"
+    build_command: "<Your build command here>"
+    branch_pattern: coverity_scan
