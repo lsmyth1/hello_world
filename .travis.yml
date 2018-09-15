@@ -18,10 +18,10 @@ addons:
   coverity_scan:
     project:
       name: "lsmyth1/hello_world1"
-      description: "<Your project description here>"
-    notification_email: smyth.luke8@googlemail.com
-    build_command_prepend: "<Your build preprocessing command here>"
-    build_command: "<Your build command here>"
+      description: Test description
+    notification_email: smyth.luke8@gmail.com
+    build_command_prepend: echo prepend
+    build_command: make
     branch_pattern: coverity_scan
   
 # Build steps
