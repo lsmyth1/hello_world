@@ -5,5 +5,5 @@ Test CI repo
 
 <a href="https://scan.coverity.com/projects/lsmyth1-hello_world1">
   <img alt="Coverity Scan Build Status"
-       src="https://scan.coverity.com/projects/16739/badge.svg"/>
+       src="https://scan.coverity.com/projects/16740/badge.svg"/>
 </a>
