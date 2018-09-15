@@ -8,5 +8,3 @@ compiler:
 # Build steps
 script:
   - make
-  - echo done
-  - ls -la /
